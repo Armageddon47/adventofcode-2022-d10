@@ -7,13 +7,12 @@ x = 1
 total = 0
 J = 0
 K = 0
-test = 0
-with open("ww.txt") as f:
+with open("input.txt") as f:
     for line in f:
         coordinates.append(line.strip())
         
 def Call(v=None):
-    global J,K,total,x,count,test
+    global J,K,total,x,count
     if J > 39:
         J=0
         K+=1
@@ -22,7 +21,7 @@ def Call(v=None):
         arr_2d[K][J] = "."
 
     J += 1
-    test += 1
+
     count += 1
     if count in [20, 60, 100, 140, 180, 220]:
         print("count is " ,count)
@@ -57,4 +56,4 @@ for i in range(6):
     for j in range(40):
         print(arr_2d[i][j], end=' ')
     print() # To move to the next line after each row
-print(test,"test")
+#end part 2
